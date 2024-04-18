@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .box{
+        height: 100px;
+        width: 100px;
+        background-color: orangered;
+        border: solid 3px black;
+        border-radius: 5px;
+        box-shadow: inset 10px 10px 10px rgb(rgb(207, 88, 88), rgb(58, 218, 58), rgb(202, 202, 202));
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .box2{
+        height: 100px;
+        background-color: orangered;
+        border: solid 3px black;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-grow: 1; /*significa que cuando se amplia la pantalla crecen en el valor que determine*/
+
+    }
+    .boxdoble{
+        width: 200px;
+    }
+    .purplebox{
+        background-color: purple;
+        padding: 5px;
+        height: 200px;
+    }
+    .flex{
+        display: flex;
+        gap: 4px;
+        color: white;
+        filter: drop-shadow(2px 2px black);
+    
+    }
+    .ej1{
+        flex-direction: row-reverse;
+        /*el rowreverse lo ubica hacia la derecha
+        flex-direction: row;
+        flex-direction: column;
+        flex-direction: column-reverse;*/
+    }
+    .ej2{
+        flex-wrap: wrap;
+        /*flex-wrap: wrap-reverse; cuando se acaba el espacio empieza a ordenar las cosas que no caben arriba*/
+    }
+    .ej3{
+        justify-content: center;
+        /*justify-content: flex-start; se alinea al principio
+        justify-content: flex-send; se alinea al final*/
+    }
+    .ej4{
+        /*align-items: center;
+        align-items: flex-end;
+        align-items: baseline; quiere decir que alinea las bases de las tipografias dentro aunquetengan distintos tamanos*/
+        align-items: flex-start;
+        /*align-self para alinear un solo elemento dentro de un conjunto*/
+    }
+    .handborder{
+        border: solid
+    }
+</style>
+
+</head>
+<body>
+
+    <h3>Flex Direction</h3>
+
+    <div class="flex ej1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+    <h3>Flex wrap</h3>
+    <div class="flex ej2">
+        <div class="box">1</div>
+        <div class="box boxdoble">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+    <h3>Justify Content</h3>
+    <div class="flex ej3 purplebox">
+        <div class="box">1</div>
+        <div class="box boxdoble">2</div>
+        <div class="box">3</div>
+        <div class="box boxdoble">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+    <h3>Align Item</h3>
+    <div class="flex ej4 purplebox">
+        <div class="box">1</div>
+        <div class="box boxdoble">2</div>
+        <div class="box">3</div>
+        <div class="box boxdoble" style="align-self: flex-end;">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+    <h3>Flex Grow</h3>
+    <div class="flex ej5 purplebox">
+        <div class="box2 handborder">1</div>
+        <div class="box2 handborder">2</div>
+        <div class="box2 handborder" style="flex-grow: 6;">3</div>
+        <div class="box2 handborder">4</div>
+        <div class="box2 handborder">5</div>
+        <div class="box2 handborder">6</div>
+    </div>
+</body>
+</html>
