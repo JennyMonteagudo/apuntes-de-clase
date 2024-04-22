@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    } 
+    .gridcontainer{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .card{
+        /*flex-basis: 200px;
+        flex-grow: 1;
+        flex-shrink: 0;
+        se pueden reemplazar con una sola*/
+        flex: 1 0 200px;
+
+        background-color: blanchedalmond;
+        padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="gridcontainer">
+        <div class="card">tarjeta1</div>
+        <div class="card">tarjeta2</div>
+        <div class="card">tarjeta3</div>
+        <div class="card">tarjeta4</div>
+        <div class="card">tarjeta5</div>
+        <div class="card">tarjeta6</div>
+    </div>
+</body>
+</html>
