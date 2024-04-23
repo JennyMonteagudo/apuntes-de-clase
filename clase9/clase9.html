@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        p {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        div {
+            border: black 5px solid;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: rgb(49, 49, 49);
+            padding: 30px;
+            gap: 20px;
+        }
+
+        .header,
+        .footer {
+            display: flex;
+            background-color: rgb(191, 111, 245);
+            padding: 10px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .bodycontent {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            border: 0px;
+            gap: 20px;
+            box-shadow: none;
+        }
+
+        .sidebar {
+            display: flex;
+            width: 200px;
+            background-color: rgb(68, 250, 165);
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .containercontent {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            flex-direction: column;
+            border: 0px;
+            box-shadow: none;
+        }
+
+        .content1 {
+            background: linear-gradient(blue, rgb(93, 255, 242));
+            flex-grow: 1;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .fila {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-grow: 1;
+            align-items: stretch;
+            border: 0px;
+            box-shadow: none;
+        }
+
+        .contentfila {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .box {
+            background: linear-gradient(130deg, blue, rgb(93, 255, 242));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <p>Header</p>
+        </div>
+        <div class="bodycontent">
+            <div class="sidebar">
+                <p>sidebar</p>
+            </div>
+            <div class="containercontent">
+                <div class="content1 box">
+                    <p>Content1</p>
+                </div>
+                <div class="fila">
+                    <div class="contentfila box">
+                        <p>Content2</p>
+                    </div>
+                    <div class="contentfila box">
+                        <p>Content3</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
