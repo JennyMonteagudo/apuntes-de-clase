@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+
+    /*reset.ccs
+    fontawesome.css
+    tourbuddies.css*/
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(41, 42, 46);
+            color: white;
+            padding: 10px;
+        }
+        .logo{
+            font-weight: bold;
+        }
+        .logo a{
+            text-decoration: none;
+            color: white;
+        }
+        .menu{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        .menu li a{
+            color: white;
+            text-decoration: none;
+        }
+        .dropdow{
+            position: relative;
+        }
+        .dropdow-menu{
+            display: none;
+            background-color: rgb(41, 42, 46);
+            padding: 40px;
+            top: 100%;
+            left: -50%;
+        }
+        .dropdow-menu li a{
+            text-decoration: none;
+        }
+        .dropdow:hover .dropdow-menu{
+            display: block;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="navbar">
+        <div class="logo">
+            <a href="./" title="Home">Logo</a>
+        </div>
+    
+
+        <ul class="menu">
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+            <li>
+                <a href="#">Nosotros</a>
+            </li>
+            <li class="dropdow">
+                <a href="#">Servicios</a>
+                <ul class="dropdow-menu">
+                    <li><a href="#">Servicio1</a></li>
+                    <li><a href="#">Servicio2</a></li>
+                    <li><a href="#">Servicio3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Contacto</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
