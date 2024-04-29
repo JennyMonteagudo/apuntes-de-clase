@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+
+    <!--
+        atributos:
+        "action" : a quien le enviare la informacion. puede ser un url https/cei.es
+        "method" : tipo de request, pueden ser Get y Post. por default viene get. es el metodo por el que se envia la info
+            el metodo GET solo soporta 2048 caracteres. a traves de la url.
+            el metodo POST soporta hasta 32mb
+
+        Types de input:
+        html 4: submit, reset, text, password, file, image, hidden.
+        html 5: button, number, tel, url, email, date, time, color range.
+        html 6: month, week, datetime-local (fecha con hora)
+
+        todos lo inputs deben tener un name
+        name: identificador unico de la variable
+        value: el valor inicial, hay que borrarlo para poder escribir
+        placeholder: es la instruccion dentro del campo del formulario.
+        maxlenght : cantidad maxima de caracteres que puede tener
+        minlegnht: cantidad minima de caracteres
+        autofocus, se;ala automaticamente el elemento mas importante de la pagina
+        required: campo obligatorio
+
+        reset: limpia el formulario
+        disable: no deja editar
+        step: sube los numeros segun el decimal que se haya elegido. el step basico es 1
+
+        button: puede meter imagenes, iconos y lo que quiera. tiene por defecto el type: submit
+        -->
+    <form action="./clase12.html" method="get">
+
+        <input type="text" autofocus name="usuario" value="name" required>
+        <input type="text" name="clave">
+        <br>
+        <input type="text" name="apellido" placeholder="Apellidos" disable>
+        <input type="text" name="contrasena" maxlength="8">
+        
+        <input type="password" value="clave">
+        <!--<input type="submit" value="Enviar Formulario">-->
+
+        <h3>selector de numeros</h3>
+        <input type="number" name="altura" min="3" step="0.1">
+
+        <input type="date" name="fecha">
+
+        <!--<todos los tipos radio deben tener el mismo name para que deseleccione los demas cuando se selecciona 1">-->
+        <input type="radio" name="saborfavorito" value="1"> opcion 1
+        <input type="radio" name="saborfavorito" value="2"> opcion 2
+        <input type="radio" name="saborfavorito" value="3"> opcion 3
+        <input type="radio" name="saborfavorito" value="4"> opcion 4
+
+        <button type="submit" onclick="Saludar"> No envia pero saluda          
+              <h3>enviar</h3>
+        </button>
+
+        <h3>Botones especiales</h3>
+        <input type="reset">
+
+    </form>
+
+    <script>
+
+        function Saludar(){
+            alert("Hola Alumnos")
+        }
+    </script>
+    
+</body>
+</html>
