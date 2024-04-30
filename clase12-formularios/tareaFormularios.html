@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Formularios</title>
+
+    <style>
+        .divbackground{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        .divform {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(127, 189, 248);
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+        button{
+            background-color: black;
+            color: beige;
+            border-radius: 10px;
+        }
+        input{
+            border: none;
+            border-radius: 10px;
+            padding: 3px;
+        }
+        select{
+            border: none;
+            border-radius: 10px;
+            padding: 3px;
+        }
+        textarea{
+            border: none;
+            border-radius: 10px;
+            padding: 3px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="divbackground">
+        <div class="divform 1">
+            <h1>Registro de Usuario</h1>
+            <form class="form" action="https://ecampus.rocks/test-forms.php" method="get">
+                <label for="nombre de usuario">Nombre de usuario
+                <input type="text" name="nombre" placeholder="nombre"></label>
+                <input type="email" name="email1" placeholder="email">
+                <input type="password" name="password" placeholder="password" minlength="7">
+                <select name="pais" id="">
+                    <option value="españa">España</option>
+                    <option value="cuba">Cuba</option>
+                    <option value="cuba">Colombia</option>
+                </select>
+                <label for="fecha de nacimiento">Fecha de nacimiento
+                <input type="date" name="nacimiento" placeholder="fecha"></label>
+                <input type="checkbox" name="TyC" required><a href="">Acepto los términos y condiciones</a>
+                <button type="submit">Enviar</button>
+
+            </form>
+        </div>
+
+        <div class="divform 2">
+            <h1>Formulario de Contacto</h1>
+            <form class="form" action="https://ecampus.rocks/test-forms.php" method="get">
+                <label for="nombre de usuario">Nombre de usuario
+                <input type="text" name="nombre" placeholder="nombre" ></label>
+                <input type="email" name="email" placeholder="email" >
+                <textarea name="asunto" id="" cols="30" rows="2" placeholder="asunto"></textarea>
+                <textarea name="mensaje" id="" cols="30" rows="10" required placeholder="mensaje"></textarea>
+                
+                <button type="submit">Enviar</button>
+
+            </form>
+        </div>
+
+        <div class="divform 3">
+            <h1>Pedido de Producto</h1>
+            <form class="form" action="https://ecampus.rocks/test-forms.php" method="get">
+                <label for="nombre completo">Nombre<input type="text" name="nombre" placeholder="nombre" ></label>
+                <label for="direccion">Direccion envio<input type="text" name="direccion" placeholder="nombre" ></label>
+                <input type="tel" name="telefono" placeholder="telf" >
+
+                <input type="radio" name="producto1" value="1">Lampara
+                <input type="radio" name="producto1" value="2">Mesa
+                <input type="radio" name="producto1" value="3">Silla
+
+                <input type="number" name="altura" min="1" step="1" placeholder="cantidad">
+
+                <select name="metododepago" id="" required>
+                    <option value="paypal">Paypal</option>
+                    <option value="Transferencia">Transferencia</option>
+                    <option value="Alaentrega">A la entrega</option>
+                </select>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

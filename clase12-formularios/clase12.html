@@ -35,7 +35,11 @@
 
         button: puede meter imagenes, iconos y lo que quiera. tiene por defecto el type: submit
         -->
-    <form action="./clase12.html" method="get">
+    <form action="./clase12.html" method="get" enctype="multipart/form-data"> <!--<esta ultima etiqueta es si vamos a subir archivos>-->
+
+        <label for="">Nombre de usuario</label>
+        <input id="nombreusuario" type="text" autofocus name="usuario" value="name" required>
+        <hr>
 
         <input type="text" autofocus name="usuario" value="name" required>
         <input type="text" name="clave">
@@ -52,10 +56,43 @@
         <input type="date" name="fecha">
 
         <!--<todos los tipos radio deben tener el mismo name para que deseleccione los demas cuando se selecciona 1">-->
-        <input type="radio" name="saborfavorito" value="1"> opcion 1
+        <input type="radio" name="saborfavorito" value="1" checked> opcion 1
         <input type="radio" name="saborfavorito" value="2"> opcion 2
         <input type="radio" name="saborfavorito" value="3"> opcion 3
         <input type="radio" name="saborfavorito" value="4"> opcion 4
+
+        <input type="color" name="color" value="#000">
+
+        <input type="range" min="1" max="10" step="0.1">
+
+        <input type="hidden" name="paso" value="1">
+
+        <br>
+        <textarea name="texto" id="" cols="30" rows="10"></textarea>
+
+        <select name="pais" size="2" multiple>
+            <option value="opcion1">Cuba</option>
+            <option value="opcion2" selected>Argentina</option>
+            <option value="opcion3">Espana</option>
+        </select>
+
+        <select name="pais" size="2" multiple>
+            <option value="opcion1">Seleccion de ciudades</option>
+            <optgroup label="Paises 1">
+                <option value="opcion1">Cuba</option>
+                <option value="opcion2" selected>Argentina</option>
+                <option value="opcion3">Espana</option>
+            </optgroup>
+    
+        </select>
+        <hr>
+
+        <input type="checkbox" name="casilla1">valor1
+        <input type="checkbox" name="casilla1">valor2
+        <input type="checkbox" name="casilla1">valor3
+
+        <hr>
+        <input type="file" name="fotoPerfil" value="image/*">
 
         <button type="submit" onclick="Saludar"> No envia pero saluda          
               <h3>enviar</h3>
