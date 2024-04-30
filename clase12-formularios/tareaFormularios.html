@@ -23,14 +23,27 @@
             border-radius: 10px;
             width: 300px;
             padding: 20px;
+            box-shadow: 2px 2px 10px black;
         }
-
+        .registro{
+            background-color: rgb(248, 206, 127);
+        }
+        .producto{
+            background-color: rgb(211, 129, 174);
+        }
+        .hotel{
+            background-color: rgb(187, 221, 143);
+        }
+        .comentario{
+            background-color: rgb(210, 173, 231);
+        }
         .form {
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 10px;
         }
+        
         button{
             background-color: black;
             color: beige;
@@ -45,6 +58,10 @@
             border: none;
             border-radius: 10px;
             padding: 3px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
         textarea{
             border: none;
@@ -52,13 +69,14 @@
             padding: 3px;
         }
         
+        
     </style>
 </head>
 
 <body>
 
     <div class="divbackground">
-        <div class="divform 1">
+        <div class="divform registro">
             <h1>Registro de Usuario</h1>
             <form class="form" action="https://ecampus.rocks/test-forms.php" method="get">
                 <label for="nombre de usuario">Nombre de usuario
@@ -78,7 +96,7 @@
             </form>
         </div>
 
-        <div class="divform 2">
+        <div class="divform contacto">
             <h1>Formulario de Contacto</h1>
             <form class="form" action="https://ecampus.rocks/test-forms.php" method="get">
                 <label for="nombre de usuario">Nombre de usuario
@@ -92,18 +110,21 @@
             </form>
         </div>
 
-        <div class="divform 3">
+        <div class="divform producto">
             <h1>Pedido de Producto</h1>
             <form class="form" action="https://ecampus.rocks/test-forms.php" method="get">
                 <label for="nombre completo">Nombre<input type="text" name="nombre" placeholder="nombre" ></label>
                 <label for="direccion">Direccion envio<input type="text" name="direccion" placeholder="nombre" ></label>
                 <input type="tel" name="telefono" placeholder="telf" >
 
-                <input type="radio" name="producto1" value="1">Lampara
-                <input type="radio" name="producto1" value="2">Mesa
-                <input type="radio" name="producto1" value="3">Silla
+                <div class="radio">
+                    <input type="radio" name="producto1" value="1">Lampara
+                    <input type="radio" name="producto2" value="2">Mesa
+                    <input type="radio" name="producto3" value="3">Silla
+                </div>
 
-                <input type="number" name="altura" min="1" step="1" placeholder="cantidad">
+
+                <input type="number" name="cantidad min="1" step="1" placeholder="cantidad">
 
                 <select name="metododepago" id="" required>
                     <option value="paypal">Paypal</option>
@@ -111,6 +132,50 @@
                     <option value="Alaentrega">A la entrega</option>
                 </select>
 
+                <button type="submit">Enviar</button>
+
+            </form>
+        </div>
+        <div class="divform hotel">
+            <h1>Reserva de Hotel</h1>
+            <form class="form" action="https://ecampus.rocks/test-forms.php" method="get">
+                <label for="nombre de usuario">Nombre de usuario <input type="text" name="nombre" placeholder="nombre"></label>
+                <input type="email" name="email1" placeholder="email">
+                <input type="tel" name="telefono" placeholder="telf" >
+                <label for="fecha de llegada">Fecha llegada <input type="date" name="llegada" placeholder="llegada"></label>
+                <label for="fecha de llegada">Fecha llegada <input type="date" name="llegada" placeholder="llegada"></label>
+
+                <select name="habitaciones" id="">
+                    <option value="sencilla">Sencilla</option>
+                    <option value="doble">Doble</option>
+                    <option value="triple">Triple</option>
+                </select>
+                <input type="number" name="cantidadpersonas" min="1" step="1" placeholder="Cantidad de personas">
+                <textarea name="mensaje" id="" cols="30" rows="5" required placeholder="Solicitudes especiales"></textarea>
+                <button type="submit">Enviar</button>
+
+            </form>
+        </div>
+        <div class="divform comentario">
+            <h1>Comentario de Productos</h1>
+            <form class="form" action="https://ecampus.rocks/test-forms.php" method="get">
+                <label for="nombre de usuario">Comentario de Productos <input type="text" name="nombre" placeholder="nombre"></label>
+                <input type="email" name="email1" placeholder="email">
+
+                <p class="clasificacion">
+                    <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                    --><label for="radio1">★</label><!--
+                    --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                    --><label for="radio2">★</label><!--
+                    --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                    --><label for="radio3">★</label><!--
+                    --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                    --><label for="radio4">★</label><!--
+                    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                    --><label for="radio5">★</label>
+                  </p>
+    
+                <textarea name="mensaje" id="" cols="30" rows="5" required placeholder="Solicitudes especiales"></textarea>
                 <button type="submit">Enviar</button>
 
             </form>
