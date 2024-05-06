@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*
+        .header{}
+        .header .h1{ }
+        .header .nav{}
+        .header .ul{}
+        .header .li{}
+        .header .li .a{}
+
+        #miObjeto #miLogo .logo .nav:hover .input[type=password] input body:before{}\*/
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .header__h1 {
+            color: white;
+        }
+
+        .header__nav {}
+
+        .header__ul {
+            display: flex;
+            gap: 80px;
+        }
+
+        .header__li {
+            text-decoration: none;
+            color: aqua;
+        }
+
+        .header__a {
+            text-decoration: none;
+            color: aqua;
+        }
+
+        .header__li--selected {}
+
+
+        .section__h3{
+            font-size: 60px;
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .footer__h3 {
+            color: white;
+        }
+
+        .footer__ul {
+            display: flex;
+            gap: 80px;
+        }
+
+        .footer__li {}
+
+        .footer__a {
+            text-decoration: none;
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__h1">CEI</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li class="header__li"><a class="header__a" href="">Section1</a></li>
+                <li class="header__li header__li--selected"><a class="header__a" href="">Section2</a></li>
+                <li class="header__li"><a class="header__a" href="">Section3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h3 class="section__h3">Nombres de Variables y selectores</h3>
+            <p class="section__p">
+                Tipos de nombres:
+            <ul class="section__ul">
+                <li class="section_li">UPPERCASE: ".MICLASE"</li>
+                <li class="section_li">lowercase: ".miclase"</li>
+                <li class="section_li">PascalCase: ".MiClase"</li>
+                <li class="section_li">camelCase: ".miClase"</li>
+                <li class="section_li">kebab-case: ".kebab-case" (separacion con guiones medios)</li>
+                <li class="section_li">snake_case: ".snake_case" (separacion con _)</li>
+            </ul>
+            </p>
+        </section>
+        <section class="section">
+            <h3 class="section__h3">Especificidad</h3>
+            <p class="section__p">
+                la especificidad (specificity) es la forma en que los navegadores deciden que regla Css se aplica a un
+                elemento. mientras mas especifica sea la regla, mas peso tendra pero tambien mas dificil de
+                sobreescribir y mantener el codigo limpio.
+
+            </p>
+            <p class="section__p"> Los valores de especificidad se calculan sumando 3 columnas (0, 0, 0)
+            <ul class="section__ul">
+                <li class="section_li">La primera representa los ids; por cada ID sumamos un valor al contenedor, eje: (3, 0, 0)</li>
+                <li class="section_li">La segunda cuenta las clases, sus atributos y pseudo clases (:hover, :root, required )</li>
+                <li class="section_li">La tercer columna </li>
+            </ul>
+            Calculadora:
+            <a class="section_a" href="https://specificity.keegan.st/">calculadora</a>
+            Grafica de especificidad:
+            <a class="section_a" href="https://jonassebastianohlsson.com/specificity-graph/"> grafica de especificidad</a>
+            </p>
+        </section>
+
+        <section>
+            <h3 class="section__h3">Metodologia BEM</h3>
+            <p class="p">
+                Esta metodologia se centra en bloques -elementos -modificadores.
+                Los nombres de las clases son en kebab-case separando__los elementos y con --los modificadores.
+
+                ejemplo: bloque_elemento-modificador
+            </p>
+            <p>
+                Bloques: cajasque por si solas tienen sentido: header,container, checkbox, boton, footer, menu
+            </p>
+            <p>
+                Elemento: partes de un bloque que no tienen sentido por si solas. "menu item", list item, checkbox
+                caption, header title
+            </p>
+            <p>
+                Modificadores: variaciones de la apariencia o comportamientode un bloque o elemento: disable, highlited,
+                checked, size big, color red
+            </p>
+            <button class="boton">Boton normal</button>
+            <button class="boton boton--color-success">Boton Succes (verde)</button>
+            <button class="boton boton--color-fail">Boton Fail (red)</button>
+
+
+        </section>
+    </main>
+    <footer class="footer">
+        <h3 class="footer__h3">RRSS</h3>
+        <ul class="footer__ul">
+            <li class="footer__li"><a class="footer__a" href="#">fb</a></li>
+            <li class="footer__li"><a class="footer__a" href="#">ig</a></li>
+            <li class="footer__li"><a class="footer__a" href="#">x</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
