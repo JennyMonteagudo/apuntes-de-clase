@@ -29,7 +29,7 @@
             color: white;
         }
 
-        .header__nav {}
+        
 
         .header__ul {
             display: flex;
@@ -46,7 +46,7 @@
             color: aqua;
         }
 
-        .header__li--selected {}
+        
 
 
         .section__h3{
@@ -69,7 +69,7 @@
             gap: 80px;
         }
 
-        .footer__li {}
+        
 
         .footer__a {
             text-decoration: none;
@@ -116,12 +116,13 @@
             <p class="section__p"> Los valores de especificidad se calculan sumando 3 columnas (0, 0, 0)
             <ul class="section__ul">
                 <li class="section_li">La primera representa los ids; por cada ID sumamos un valor al contenedor, eje: (3, 0, 0)</li>
-                <li class="section_li">La segunda cuenta las clases, sus atributos y pseudo clases (:hover, :root, required )</li>
-                <li class="section_li">La tercer columna </li>
+                <li class="section_li">La segunda cuenta las clases, sus atributos (class, title es un atributo, required) y pseudo clases (:hover, :root,  )</li>
+                <li class="section_li">La tercer columna son los elementos o tags (strong, body, input)</li>
             </ul>
+            <h3>cuando hay un solo guion bem no lo cuenta es un espacio en el nombre del elemento <br>el stylo inline en el html es el priorizado, ponerlos as[iquita puntos en el trabajo final</h3>
             Calculadora:
             <a class="section_a" href="https://specificity.keegan.st/">calculadora</a>
-            Grafica de especificidad:
+            Grafica de especificidad (es la que se va a usar para medir la especificidad de la web del final):
             <a class="section_a" href="https://jonassebastianohlsson.com/specificity-graph/"> grafica de especificidad</a>
             </p>
         </section>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        @media screen and (max-width: 768px) {
+            .div-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                height: 100vh;
+                background-color: rgb(233, 150, 178);
+            }
+
+            .titulomobile {
+                color: rgb(218, 20, 47);
+                font-size: 90px;
+            }
+            .titulotablet{
+                display: none;
+            }
+            .titulodesktop{
+                display: none;
+            }
+            .img{
+                width: 300px;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .div-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                height: 100vh;
+                background-color: rgb(143, 179, 233);
+            }
+
+            .titulotablet {
+                color: rgb(43, 55, 226);
+                font-size: 90px;
+            }
+            .titulodesktop{
+                display: none;
+            }
+            .titulomobile {
+                display: none;
+            }
+            .img{
+                width: 300px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .div-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                height: 100vh;
+                background-color: rgb(255, 210, 172);
+            }
+
+            .titulodesktop {
+                color: rgb(228, 103, 19);
+                font-size: 90px;
+            }
+
+            .titulotablet {
+                display: none;
+            }
+            .titulomobile {
+                display: none;
+            }
+            .img{
+                width: 300px;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="div-section">
+                <h1 class="titulomobile">Mobile</h1>
+                <h1 class="titulotablet">Tablet</h1>
+                <h1 class="titulodesktop">Desktop</h1>
+                <picture>
+                    <source media="(min-width: 768px) and (max-width: 1024px)" srcset="img/pexels-valeriya-827518.jpg">
+                    <source media="screen and (min-width: 1024px)" srcset="img/pexels-zydeaosika-3987613.jpg">
+                    <img class="img" src="img/pexels-leah-newhouse-50725-2090641.jpg" alt="Mi foto">
+                </picture>
+            </div>
+            
+        </section>
+    </main>
+
+</body>
+
+</html>
