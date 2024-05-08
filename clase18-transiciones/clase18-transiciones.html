@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 2s, height 2s, background-color 2s;
+        }
+
+        .box:hover {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            transition: rotate 1s, scale 2s, border-radius 2s, background-color 2s;
+            background-color: aqua;
+        }
+        .box2:hover {
+           background-color: rgb(255, 94, 0);
+            rotate: 60deg;
+            scale: 5;
+            border-radius: 50%;
+        }
+        .body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+    </style>
+</head>
+
+<body class="body">
+    <div class="box"></div>
+    <div class="box2"></div>
+
+</body>
+
+</html>

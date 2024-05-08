@@ -7,85 +7,74 @@
     <title>Ejercicio</title>
 
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
         }
-        @media screen and (max-width: 768px) {
-            .div-section {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                height: 100vh;
-                background-color: rgb(233, 150, 178);
-            }
 
-            .titulomobile {
-                color: rgb(218, 20, 47);
-                font-size: 90px;
-            }
-            .titulotablet{
-                display: none;
-            }
-            .titulodesktop{
-                display: none;
-            }
-            .img{
-                width: 300px;
-            }
+        .div-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            background-color: rgb(233, 150, 178);
         }
+
+        .titulomobile {
+            color: rgb(218, 20, 47);
+            font-size: 90px;
+        }
+
+        .titulotablet, .titulodesktop {
+            display: none;
+        }
+
+        .img {
+            width: 300px;
+        }
+
 
         @media screen and (min-width: 768px) and (max-width: 1024px) {
             .div-section {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                height: 100vh;
+                
                 background-color: rgb(143, 179, 233);
             }
 
             .titulotablet {
+                display: contents;
                 color: rgb(43, 55, 226);
                 font-size: 90px;
             }
-            .titulodesktop{
+
+            .titulodesktop, .titulomobile {
                 display: none;
             }
-            .titulomobile {
-                display: none;
-            }
-            .img{
+
+            .img {
                 width: 300px;
             }
         }
 
         @media screen and (min-width: 1024px) {
             .div-section {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                height: 100vh;
+                
                 background-color: rgb(255, 210, 172);
             }
 
             .titulodesktop {
+                display: contents;
                 color: rgb(228, 103, 19);
                 font-size: 90px;
             }
 
-            .titulotablet {
+            .titulotablet, .titulomobile {
                 display: none;
             }
-            .titulomobile {
-                display: none;
-            }
-            .img{
+            .img {
                 width: 300px;
             }
-            
+
         }
     </style>
 </head>
@@ -103,7 +92,7 @@
                     <img class="img" src="img/pexels-leah-newhouse-50725-2090641.jpg" alt="Mi foto">
                 </picture>
             </div>
-            
+
         </section>
     </main>
 
