@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Claro/Oscuro</title>
+
+    <style>
+        /*Inicio de Estilos para el modo claro*/
+        /*------------------------------------*/
+
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .contenido {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .caja {
+            width: 200px;
+            height: 200px;
+            background-color: lightgrey;
+            margin: 20px auto;
+
+        }
+
+        /*Inicio de Estilos para el modo claro*/
+        /*------------------------------------*/
+        body.modo-oscuro {
+            background-color: black;
+            color: white;
+        }
+
+        body.modo-oscuro .caja {
+            background-color: rgb(53, 53, 53);
+        }
+        /* @media only screen and (orientation:portrait) {}*/
+
+        /*@media only screen and (orientation: landscape) {
+            body {
+                background-color: aquamarine;
+            }
+        }*/
+
+        /* es para detectar la preferencia del usuario en caso de usar modo oscuro (dark/light)*/
+
+    </style>
+</head>
+
+<body class="modo-oscuro1">
+    <main class="contenido">
+        <h1>Nuestra Primer Web Inteligente</h1>
+        <img src="" alt="">
+        <div class="caja">Contenido</div>
+        <button id="btnModoClaroOscuro">Modo Oscuro</button>
+    </main>
+
+    <script>
+        //Desde JS podemos agarrar elementos de nuestra web con los selectores CSS.
+
+        //1.agarramos el boton con el id #btnModoClaroOscuro
+        const btn = document.querySelector("#btnModoClaroOscuro");
+        //2.agarramos el body con el tag <body>
+        const body = document.querySelector("body");
+
+        console.log(body);
+
+        //3. Cuando le hago click a btn
+        btn.addEventListener("click", () => {
+
+            //4. Poner la clase modo oscuro al body
+
+            //alert("Holaaaa");    Te saca un cartelito que dice hola
+
+            // add agrega la clase cuando no exite.
+            //body.classList.add("modo-oscuro")
+
+            // toggle agrega la clase cuando no exite y la quita cuando si existe.
+            body.classList.toggle("modo-oscuro")
+        })
+
+
+    </script>
+</body>
+
+</html>

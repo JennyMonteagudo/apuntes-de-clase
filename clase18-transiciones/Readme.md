@@ -10,8 +10,9 @@ Son una forma de cambiar lo valores de las propiedades de un elemento de manera 
 
 Podemos concultar el manual oficial: (esto es un ejemplo de como se ven los links)
 
-Sin embargo una forma rapida de identificar propiedades transicionables es buscar
+Sin embargo una forma rapida de identificar propiedades transicionables es buscar propiedades que acepten valores numericos o de color.
 
+Propiedades Numericas:
 -Width  
 -heigth  
 -margin  
