@@ -1,0 +1,78 @@
+:root {
+    --bg-Primary: white;
+    --bg-Secundary: rgb(221, 221, 221);
+    --txt-primary: black;
+    --txt-secundary: rgb(0, 0, 0);
+
+}
+
+
+/*       Modo Claro/ Oscuro      */
+.u-Dark{
+    --bg-Primary: rgb(12, 12, 12);
+    --bg-Secundary: rgb(41, 41, 41);
+    --txt-primary: rgb(255, 255, 255);
+    --txt-secundary: rgb(255, 255, 255);
+}
+.u-bgPrimary{
+    background: var(--bg-Primary);
+}
+.u-bgSecundary{
+    background: var(--bg-Secundary);
+}
+.u-txtPrimary{
+    color: var(--txt-primary);
+}
+.u-txtSecundary{
+    color: var(--txt-secundary);
+}
+
+.u-flexCol{
+    display: flex;
+    flex-direction: column;
+}
+.u-flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/*      CONTROLLERS      */
+.Controllers{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    /*Como centrar
+    left:50%;
+    transform: translate(-50%);*/
+
+    display: flex;
+    
+    gap: 10px;
+    padding: 10px;
+
+    background: grey;
+}
+
+.Btn{
+    color: var(--txt-primary);
+    background: var(--bg-Primary);
+    border:none;
+
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 30px;
+    min-width: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.Btn--icon{
+    min-width: unset;
+
+}

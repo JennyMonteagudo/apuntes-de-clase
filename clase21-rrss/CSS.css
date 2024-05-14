@@ -1,0 +1,35 @@
+
+@font-face{
+    font-family: "Ananda";
+    src: url("clase21-rrss/fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf") format('truetype');
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Ananda";
+
+}
+.Main{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px black;
+}
+.IconBox-text{
+    font-family: poppins;
+}
