@@ -7,24 +7,34 @@
 }
 
 
+
 /*       Modo Claro/ Oscuro      */
 .u-Dark{
     --bg-Primary: rgb(12, 12, 12);
     --bg-Secundary: rgb(41, 41, 41);
     --txt-primary: rgb(255, 255, 255);
     --txt-secundary: rgb(255, 255, 255);
+
+    /*fix para el icono de twiter*/
+    --x-color: white;
 }
+
+/*       Clases Reutilizables      */
 .u-bgPrimary{
     background: var(--bg-Primary);
+    transition: background-color 0.3s ease;
 }
 .u-bgSecundary{
     background: var(--bg-Secundary);
+    transition: background-color 0.3s ease;
 }
 .u-txtPrimary{
     color: var(--txt-primary);
+    transition: color 0.3s ease;
 }
 .u-txtSecundary{
     color: var(--txt-secundary);
+    transition: color 0.3s ease;
 }
 
 .u-flexCol{

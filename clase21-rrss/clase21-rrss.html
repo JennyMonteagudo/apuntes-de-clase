@@ -18,7 +18,8 @@
 
 
     <!--Iconos fontawesome-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="CSS.css">
     <link rel="stylesheet" href="Controllers.css">
@@ -34,7 +35,7 @@
         <div class="Icons">
 
             <div class="IconBox u-bgPrimary IconBox--fb">
-                <a class="IconBox-link" href=""></a>
+                <a class="IconBox-link" href="">
                 <div class="IconBox-layers">
                     <span class="IconBox-span"></span>
                     <span class="IconBox-span"></span>
@@ -43,22 +44,24 @@
                     <span class="IconBox-span  fab fa-facebook"></span>
                 </div>
                 <div class="IconBox-text">Facebook</div>
+            </a>
             </div>
 
             <div class="IconBox u-bgPrimary IconBox--x">
-                <a class="IconBox-link" href=""></a>
-                <div class="IconBox-layers">
-                    <span class="IconBox-span"></span>
-                    <span class="IconBox-span"></span>
-                    <span class="IconBox-span"></span>
-                    <span class="IconBox-span"></span>
-                    <span class="IconBox-span  fab fa-twitter"></span>
-                </div>
-                <div class="IconBox-text">X</div>
+                <a class="IconBox-link" href="">
+                    <div class="IconBox-layers">
+                        <span class="IconBox-span"></span>
+                        <span class="IconBox-span"></span>
+                        <span class="IconBox-span"></span>
+                        <span class="IconBox-span"></span>
+                        <span class="IconBox-span  fab fa-x-twitter"></span>
+                    </div>
+                    <div class="IconBox-text">X</div>
+                </a>
             </div>
 
             <div class="IconBox u-bgPrimary IconBox--ig">
-                <a class="IconBox-link" href=""></a>
+                <a class="IconBox-link" href="">
                 <div class="IconBox-layers">
                     <span class="IconBox-span"></span>
                     <span class="IconBox-span"></span>
@@ -67,10 +70,11 @@
                     <span class="IconBox-span  fab fa-instagram"></span>
                 </div>
                 <div class="IconBox-text">Instagram</div>
+            </a>
             </div>
 
             <div class="IconBox u-bgPrimary IconBox--in">
-                <a class="IconBox-link" href=""></a>
+                <a class="IconBox-link" href="">
                 <div class="IconBox-layers">
                     <span class="IconBox-span"></span>
                     <span class="IconBox-span"></span>
@@ -79,10 +83,11 @@
                     <span class="IconBox-span  fab fa-linkedin-in"></span>
                 </div>
                 <div class="IconBox-text">Linkedin</div>
+            </a>
             </div>
 
             <div class="IconBox u-bgPrimary IconBox--yt">
-                <a class="IconBox-link" href=""></a>
+                <a class="IconBox-link" href="">
                 <div class="IconBox-layers">
                     <span class="IconBox-span"></span>
                     <span class="IconBox-span"></span>
@@ -91,10 +96,11 @@
                     <span class="IconBox-span  fab fa-youtube"></span>
                 </div>
                 <div class="IconBox-text">Youtube</div>
+            </a>
             </div>
 
             <div class="IconBox u-bgPrimary IconBox--lion">
-                <a class="IconBox-link" href=""></a>
+                <a class="IconBox-link" href="">
                 <div class="IconBox-layers">
                     <span class="IconBox-span"></span>
                     <span class="IconBox-span"></span>
@@ -103,6 +109,7 @@
                     <span class="IconBox-span  fab fa-l"></span>
                 </div>
                 <div class="IconBox-text">Lion King</div>
+            </a>
             </div>
 
 
@@ -114,7 +121,7 @@
         <button id="btnDarkLight" class="Btn Btn--icon">
             <span class="material-symbols-outlined">
                 dark_mode
-                </span>
+            </span>
         </button>
     </div>
 
@@ -132,14 +139,14 @@
 
             //condicional if
 
-            if (iconsContainer.classList.contains("u-flexCol") ){
+            if (iconsContainer.classList.contains("u-flexCol")) {
                 //codigo si se cumple la condicion
                 //si nombre es alfredo
-                btnDirection.textContent="Fila";
-            }else {
+                btnDirection.textContent = "Fila";
+            } else {
                 //codigo si NO se cumple la condicion
                 //no, el nombre es alfredo
-                btnDirection.textContent="Columna";
+                btnDirection.textContent = "Columna";
             }
 
         });
@@ -147,10 +154,10 @@
         btnDarkLight.addEventListener("click", () => {
             document.body.classList.toggle("u-Dark");
 
-            if( document.body.classList.contains("u-Dark")){
-                btnDarkLight.querySelector("span").innerText="light_mode";
-            }else{}
-            btnDarkLight.querySelector("span").innerText="dark_mode";
+            if (document.body.classList.contains("u-Dark")) {
+                btnDarkLight.querySelector("span").innerText = "light_mode";
+            } else { }
+            btnDarkLight.querySelector("span").innerText = "dark_mode";
         })
 
     </script>
