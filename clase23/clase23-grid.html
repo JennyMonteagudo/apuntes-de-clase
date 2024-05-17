@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        .GridContainer {
+            border: 5px solid black;
+            width: 90vw;
+
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            grid-gap: 10px;
+            grid-template-areas:
+                "col1 col2 col3"
+                "col1 col2 col3"
+                "col1 col2 col3"
+        
+
+        gap: 5px;
+        grid-auto-flow: column;
+        grid-auto-rows: 150px;
+        grid-auto-columns: 200px;
+
+        gap: 5px 20px;
+        }
+
+        /*span te amplia en x espacios*/
+        .item-1 {
+            background-color: blue;
+            grid-column-start: 1;
+            grid-column-end: span 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .item-2 {
+            background-color: blueviolet;
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+
+        .item-3 {
+            background-color: rgb(110, 226, 43);
+            grid-area: 4 / 5 / 1 / 3;
+        }
+
+        .item {
+            border: 1px solid blue;
+            background-color: lightblue;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="GridContainer">
+        <div class="item-1">caja1</div>
+        <div class="item-2">caja2</div>
+        <div class="item-3">caja3</div>
+    </div>
+
+
+</body>
+
+</html>
