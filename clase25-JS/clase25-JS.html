@@ -12,6 +12,8 @@
 
     <button id="btnSuma">Suma</button>
     <button id="btnResta">Resta</button>
+    <button id="btnMulti">Multiplicar *5</button>
+    <button id="btnDiv">Dividir /2</button>
     <h3>resultado</h3>
     <div id="resultado">0</div>
 
@@ -19,19 +21,45 @@
     <script>
         const btnSuma = document.getElementById("btnSuma");
         const btnResta = document.getElementById("btnResta");
+        const btnMulti = document.getElementById("btnMulti");
+        const btnDiv = document.getElementById("btnDiv");
         const divResultado = document.getElementById("resultado");
 
+
+        //const divResultado2 = document.querySelector("lo que quieras")
+
         let numero=0;
+        ImprimirEnPantalla(" Has click en los botones");
 
         btnSuma.addEventListener("click", () => {
             numero = numero +1; 
-            divResultado.innerText= numero;
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
         });
 
         btnResta.addEventListener("click", () => {
             numero = numero -1; 
-            divResultado.innerText= numero;
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
         });
+
+        btnMulti.addEventListener("click", () => {
+            numero = numero *5 ; 
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
+        });
+
+        btnDiv.addEventListener("click", () => {
+            numero = numero /2 ; 
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
+        });
+
+        //creamos una funcion que imrprime en pantalla un resultado
+        function ImprimirEnPantalla (valor) {
+        
+            divResultado.innerText= valor;
+        }
 
         
 

@@ -7,6 +7,18 @@ Interpretado:
 
 Va leyendo de linea en linea y en orden.
 
+
+# divResultado es una Variable:
+divResultado: es el nombre de que vien despues de const
+
+# .getElementById es un Metodo:
+
+los metodos son lo amarillo. 
+
+# el objeto es: const miObjeto = {dentro de un objeto puede haber otros objetos tipo objetoMio = {} }
+
+
+
 ```js
 //ejemplo de un objeto con rpopiedades y metodos 
 let alumnos = {
@@ -57,7 +69,7 @@ Orientado a objetos:
 
 >Usar esa variable: Abrir la caja y ver que hay dentro. POdemosver las cosasy modificarlas.
 
-En JS las variables se declaran con la palabra `let` o `const`. Antes se definan con la palabra ``var` seguido del nombre de la variable y opcionalmente un valor inicial.
+En JS las variables se declaran con la palabra `let` o `const`. Antes se definian con la palabra ``var` seguido del nombre de la variable y opcionalmente un valor inicial.
 
 ```js
 let nombre="Juan"
@@ -128,13 +140,39 @@ let alumnosDeDW=["Nerea", "David", "Jenny", ...];
 let edades = [25, 32, 18];
 let listaMixta= [1, "Juan", true];
 
+const ListaDeCompras = ["tomate", "lechuga" ];
+//agregar a la lista "patata"
+ListaDeCompras= ["tomate", "lechuga", "patata" ]; //OK 
+// ListaDeCompras = "patata"; //ERROR
+
+//las listas empiezan con el indice 0 y se leen asi
+
+console. log (ListaDeCompras [0]); //tomate
+console. log (ListaDeCompras [2]); //lechuga
+
+console. log (ListaDeCompras [3]); //undefined
+
+
+//-------------------
 //objetos
 const alumno = { 
     nombre: "Mario", 
     edad: 33,
     isRecibido: false,
     presentarProyecto: function()=> { isRecibido=true;
+    edad=34;
 }
 }
 
+//lectura de una variable
+console. log(estaPrendida)
+let miNuevaVar= estaPrendida;
+
+//lectura de una propiedad
+console.log("La edad de Mario es: ", alumno.edad); //imprime "la edad de Mario es: 33"
+
+
+//uso de metodo
+alumno.presentarProyecto();
+console.log();
 ```
