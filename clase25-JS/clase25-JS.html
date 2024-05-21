@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+
+<body>
+    <h1>Bienvenido a Java Script</h1>
+
+    <button id="btnSuma">Suma</button>
+    <button id="btnResta">Resta</button>
+    <h3>resultado</h3>
+    <div id="resultado">0</div>
+
+
+    <script>
+        const btnSuma = document.getElementById("btnSuma");
+        const btnResta = document.getElementById("btnResta");
+        const divResultado = document.getElementById("resultado");
+
+        let numero=0;
+
+        btnSuma.addEventListener("click", () => {
+            numero = numero +1; 
+            divResultado.innerText= numero;
+        });
+
+        btnResta.addEventListener("click", () => {
+            numero = numero -1; 
+            divResultado.innerText= numero;
+        });
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
