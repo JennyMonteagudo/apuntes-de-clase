@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ejercicios de JS</h1>
+
+    <div id="galeria"></div>
+
+    <script>
+
+        //1. Impar
+        function parImpar(num) {
+            let respuesta; //creo una respuesta sin ningun valor, es leto porque la voy a modificar
+
+            if (num % 2 == 0) {
+                respuesta="El numero " + num+ " es PAR";
+            }
+            else {
+                respuesta="El numero " + num+ " es IMPAR";
+            }
+            return respuesta;
+        }
+
+        let msg;
+        msg= parImpar (20);
+        console.log(msg);
+
+        msg= parImpar ("patata");
+        console.log(msg);
+
+        //2. Igual a 0
+
+        function Cero(nume){
+            let respuesta;
+            if (nume == 0) {
+                respuesta="El numero es igual a 0";
+            }
+            if (nume < 0) {
+                respuesta="El numero es Negativo";
+            }
+            if (nume > 0) {
+                respuesta="El numero es Positivo";
+            }
+            return respuesta;
+        }
+        let res;
+        res= Cero (0);
+        console.log(res);
+
+        res= Cero (12);
+        console.log(res);
+
+        res= Cero (-3);
+        console.log(res);
+
+        //3. Mayor de edad
+
+        function Mayor(numer){
+            let respuesta;
+            if (numer >= 18) {
+                respuesta="Es mayor de edad";
+            }
+            else {
+                respuesta="Es menor de edad";
+            }
+            
+            return respuesta;
+        }
+
+        let mayor;
+        mayor= Mayor (21);
+        console.log(mayor);
+
+        //4. Dia Laboral
+        
+        function PPT(dia){
+            let respuesta;
+            if(dia == "sabado" || dia == "domingo"){
+                respuesta="Es festivo";
+            }
+            else{
+                respuesta="Es Laboral"
+            }
+            return respuesta;
+        }
+
+        let festivo;
+        festivo= PPT ("sabado");
+        console.log(festivo);
+
+
+        //5. Piedra Papel Tijera
+
+        
+
+        function PPT(jugador1, jugador2){
+            let ganador;
+            if(jugador1=="piedra" && jugador2 =="papel"){
+                ganador="Gana jugador 2";
+            }
+            return ganador;
+            
+        }
+
+        let ganador;
+        ganador= (PPT="piedra", "papel")
+        console.log (ganador)
+        
+
+
+    </script>
+</body>
+
+</html>
