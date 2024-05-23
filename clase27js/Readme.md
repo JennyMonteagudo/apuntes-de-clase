@@ -10,7 +10,7 @@ Es un bloque de codigo o algoritmo que realiza una operacion especifica. puede r
  * 
  * @return {void} = no devuelve nada
  **/
-function Saludar( nombre, edad ){ //lo que esta dentro de los () son los parametros
+function Saludar( nombre, edad, genero="no indicado" ){ //lo que esta dentro de los () son los parametros == es lo mismo que poner let nombre= o let edad= o let genero= por lo que lo que igualemos sera el valor por default si no se ingresa ese valor de argumento. El que tenga un valor siempre es preferible que vaya detras.
 
     //1. creo una variable
     let respuesta;
@@ -96,6 +96,12 @@ Podemos verificar que multiples operaciones sean verdaderas usando estos operado
 if(edad> 21 && acepteTyC == true){
     //regisrar usuario
 }
+if(edad> 21 || (edad>10 && autorizacionDelPadre == true)  ){
+    //se puede ir de viaje
+    else{
+        //no se puede ir
+    }
+}
 
 if(diaSemana == "sabado" || diaSemana == "domingo"){
     return "es fin de semana";
@@ -105,18 +111,43 @@ if (num%2 !== 0)
  // es impar, significa lo contrario, osea, que no es igual a 0
 ```
 
-## usode Bucles
+## Uso de Bucles
 
 Los bucles permiten repetir el codigo varias veces. En JS tenemos 3 tipos de bucles:
 
 -`for`: se utiliza cuando sabemos cuantas veces queremos que se repita algo.
--`while`: 
-- `do-while`:
+-`while`: se utiliza cuando no sabemos cuantas veces se va a repetir el bloque de codigo. 
+- `do-while`: Es igual al while pero se jecuta al menos una vez.
 
 ```js
 // for (iniciador; condicion; incremento)
-
+//let contador es una variable suq me invente y el valor de iniciador puede comenzar en el numero que yo quiera.
 for(let contador=0; contador <10; contador++) {
     //me voy a repetir muchas veces
     console.log("Hola Alumnos" + contador)
 }
+
+
+//bucle While
+let i=0;
+while(i<10){
+    console.log("Hola Alumnos")
+    i++;
+
+    
+}
+
+let salir=false;
+while(salir== false){
+    console.log("me quedo jugando");
+    salir=true;
+
+    
+}
+
+//bucle do-While
+let i=0;
+do {
+    console.log("Hola Alumnos");
+    
+}while{i<5};

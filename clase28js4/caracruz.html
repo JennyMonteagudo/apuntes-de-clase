@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara o Cruz</title>
+</head>
+<body>
+    <h1>Cara o Cruz</h1>
+
+    <button onclick="tiraMoneda">Tirar Moneda</button>
+
+    <p>Cantidad de Caras <span id="cantCara">0</span></p>
+    <p>Cantidad de Cruz <span id="cantCruz">0</span></p>
+
+    <p>Porcentaje de Caras <span id="porcentajeCaras">0%</span></p>
+
+    <script>
+        let cantCara=5;
+        let cantCruz=0;
+        let porcentaje=0;
+        let txtPorcentaje="";
+
+        const txtCara= document.getElementById("cantCara")
+        const txtCruz= document.getElementById("cantCruz")
+        const txtPorcentaje= document.getElementById("porcentajeCaras")
+
+        function tiraMoneda(){
+            //operacion para tirar la moneda
+            let resultado= Math.random < 0.5 ? "cara": "cruz"
+
+            if (Math.random () < 0.5){
+                //cara
+                cantCara++;
+            } else{
+                //cruz
+                cantCruz++;
+            }
+
+            ImprimirResultado();
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -79,9 +79,9 @@
 
         //4. Dia Laboral
         
-        function PPT(dia){
+        function Festivo(dia){
             let respuesta;
-            if(dia == "sabado" || dia == "domingo"){
+            if(dia == "sabado" || dia == "domingo" || dia == "Sabado" || dia == "Domingo" ){
                 respuesta="Es festivo";
             }
             else{
@@ -91,29 +91,63 @@
         }
 
         let festivo;
-        festivo= PPT ("sabado");
+        festivo= Festivo ("sabado");
         console.log(festivo);
 
 
         //5. Piedra Papel Tijera
 
         
-
+        
         function PPT(jugador1, jugador2){
-            let ganador;
-            if(jugador1=="piedra" && jugador2 =="papel"){
+            let ganador="Valor invalido";
+
+            if (jugador1 == jugador2){
+                ganador="Empate";
+            }
+            if(jugador1=="piedra" && jugador2 =="papel" || jugador1=="papel" && jugador2 =="tijera" || jugador1=="tijera" && jugador2 =="piedra"){
                 ganador="Gana jugador 2";
+            }
+            if(jugador1=="tijera" && jugador2 =="papel" || jugador1=="piedra" && jugador2 =="tijera" || jugador1=="papel" && jugador2 =="piedra"){
+                ganador="Gana jugador 1";
             }
             return ganador;
             
         }
 
-        let ganador;
-        ganador= (PPT="piedra", "papel")
-        console.log (ganador)
+        let piedraPapelTijera;
+        piedraPapelTijera= PPT("piedra", "papel")
+        console.log (piedraPapelTijera)
         
+        piedraPapelTijera= PPT("tijera", "papel")
+        console.log (piedraPapelTijera)
+
+        // Otra forma de hacer PPT
+
+        function PiedraPT(jugador1, jugador2){
+            let ganar="Valor invalido";
+
+            if (jugador1 == jugador2){
+                ganar="Empate"
+
+            } else if (jugador1=="tijera"){
+
+                if(jugador2== "piedra"){
+                    ganar="gana Jugador 2";
+                } else {
+                    ganar="gana Jugador 1";
+                }
 
 
+            }
+            // Operacion Ternaria
+            //Hace una pregunta mas humana. El resultado de jugador 2 == piedra se cumple? opcion 1 si se cumplio (gana jugador 2) opcion 2 si no se cumplio (gana jugador 1)
+            resultado = (jugador2 == "piedra") ? "gana Jugador 2" : "gana Jugador 1"
+
+
+
+
+        }
     </script>
 </body>
 
