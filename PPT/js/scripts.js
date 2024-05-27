@@ -85,6 +85,19 @@ function jugar(jugador){
     mostrarEstadisticas();
 }
 
+let intervaloAI;
+function AIvsAI(){
+    //Intervalo para ejecutar algo muchas veces.
+    //setInterval("una funcion , cada cuanto lo voy a hacer, en milisegundos" 1s=1000ms)
+    intervaloAI= setInterval(()=> {
+        const JugadorAI2=elegirAutomaticamente(); //piedra, papel, tijera
+         jugar(JugadorAI2);
+    }, 1000);
+
+
+    
+}
+
 function elegirAutomaticamente(){
     const opciones=["piedra", "papel", "tijera"];
     // 0-2 (3 es lo mismo que opciones.length)
@@ -99,6 +112,13 @@ function mostrarEstadisticas(){
     txtPerdidas.innerText = objPuntaje.perdidas;
     txtEmpatadas.innerText = objPuntaje.empatadas;
 
+    txtEstadisticas.innerHTML =`
+        <div>
+            <h3>Stats AI:</h3>
+            👊🏻x ${objPuntaje.stats.ai_piedra} ✋🏻x ${objPuntaje.stats.ai_papel} ✌🏻x ${objPuntaje.stats.ai_tijera}
+            <h3>Stats Usuario:</h3>
+            👊🏻x ${objPuntaje.stats.user_piedra} ✋🏻x ${objPuntaje.stats.user_papel} ✌🏻x ${objPuntaje.stats.user_tijera}
+        </div>`;
     // graficar Barra
     graficarBarra();
 }
@@ -116,6 +136,9 @@ function graficarBarra(){
 
 // vaciar todas las estadísticas
 function resetStats(){
+
+    clearInterval(intervaloAI);
+
     objPuntaje.ganadas = 0;
     objPuntaje.perdidas = 0;
     objPuntaje.empatadas = 0;

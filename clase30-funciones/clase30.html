@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script>
+        const alumnos = ["Juan", "Pedro", "Maria", "Lucas", "Cecilia", "Carol"];
+        console.log(alumnos);
+
+        //
+        alumnos.pop
+        const ultimoAlumno = alumnos.pop();
+        console.log(ultimoAlumno);
+        console.log("Lista Actualizada de alumnos: ", alumnos);
+
+        //quitamos el ultimo elemento
+        alumnos.pop();
+        console.log("POP: lista actualizada de alumnos: ", alumnos);
+
+        //Agregar elementos al final
+        alumnos.push("Alexander", "Jenny");
+        console.log("Push: lista actualizada de alumnos: ", alumnos);
+
+
+        //Elimina el primer elemento
+        alumnos.shift();
+        console.log("Shift: lista actualizada de alumnos: ", alumnos);
+
+        //Agregar por elemento al inicio
+        alumnos.unshift("Paula", "Eva");
+        console.log("UnShift: lista actualizada de alumnos: ", alumnos);
+
+        //Se posiciona, Elimina y agrega elementos en un lugar especifico
+        alumnos.splice(2, 2, "Nerea", "Angela");
+        console.log("Splice: lista actualizada de alumnos: ", alumnos);
+
+        alumnos.splice(4, 1, "David", "Karo", "Johan");
+        console.log("Splice: lista actualizada de alumnos: ", alumnos);
+
+        alumnos.reverse();
+        console.log("Reverse ", alumnos);
+
+        const letras = ["a", "b", "c", "d"];
+
+        for (let i = 0; i < letras.length; i++) {
+            const letra = letras[i];
+        }
+
+        letras.forEach(function (letra) {
+            console.log("bucle 1: ", letra);
+        }) //=
+
+        letras.forEach(letra => {
+            console.log("bucle 2: ", letra);
+        })
+
+        //si necesito el indice, lo puedo recibir como 2do parametro
+        //el foreach no devuelve el array actualizado.
+        letras.forEach((letra, i) => {
+            console.log("bucle3", letra, i);
+            console.log("Letra es: ", letra);
+            letra = letra.toUpperCase(); //a=>A (no funciono)
+
+            //como no me devuelve automaticamente el item actualizado, lo actualizo uno por uno usando el indice.
+            letras[i] = letra.toUpperCase(); // a=> A (SI funciono)
+        })
+        console.log(letras);
+    </script>
+</body>
+
+</html>
