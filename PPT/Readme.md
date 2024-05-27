@@ -1,0 +1,31 @@
+# Juego de Piedra Papel Tijeras
+
+Tareas:
+- [X] Crear index.html, scripts.js, styles.css
+- [X] Maquetar HTML con Botones - txtResultados
+- [X] Llamar a la funcion Jugar() desde los botones
+- [X] Jugar contra la AI de manera estática
+- [X] Mostrar en txtResultado quien ganó usando template Strings
+- [X] Crear la funcion `elegirAutomaticamente()` para que la AI pueda elegir
+- [X] Crear un objeto de estadísticas `objPuntaje`
+- [X] Crear función de `resetStats()` para comenzar la partida y borrar las estadisticas del objPuntaje.
+- [X] Contar partidas ganadas - perdidas - empatadas
+- [X] Contar valores de la AI y valores del Jugador
+- [X] Crear en el HTML `<span>` de Ganadas - Perdidas - Empatadas
+- [X] Crear función `mostrarEstadisticas()` para mostrar mostrar Ganadas - Perdidas - Empatadas
+- [X] Crear en el HTML `<div>` de txtEstadisticas
+- [ ] Mostrar estadísticas de Usuario y AI (cant de 👊🏻, ✋🏻, ✌🏻 de cada uno) con template String.
+- [X] Crear en el HTML `<div>` de `ProgressBar` con sus hijos
+- [X] Armar selectores de progressBar en JS
+- [X] crear utilities en CSS de `u-bgRed` y `u-bgBlue`
+- [X] Armar función de graficar barra calculando porcentajes y actualizando el ancho de las barras con `divGanadas/Perdidas.style.width`
+- [ ] Crear un botón donde `AutoPlay` para que la maquina juegue contra ella misma.
+- [ ] Crear la función `AIvsAI` para lograr el autoPlay.
+- [ ] Usar `setInterval` para que juegue permanentemente cada 0.1 segundos.
+- [ ] Agregar `clearInterval` en el reset.
+- [ ] Agregar un botón de `Reset` en el HTML para detener detener el juego y reiniciar.
+- [ ] Diseñar interfaz del juego
+- [ ] Modificar los botones para que no se vean como botones
+- [ ] Agregar fondo, imagenes
+- [ ] Agregar algún personaje Animado que represente la AI (lottiefiles.com)
+- [ ] Ver archivos .lottie y .json `<lottie-player>` `<dotlottie-player>`
