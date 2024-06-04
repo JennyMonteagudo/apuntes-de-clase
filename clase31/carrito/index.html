@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    <div>
+        <h1>Cafe</h1>
+        <button onClick="sumarUno">Agregar 1 al carrito</button>
+        <button onClick="">Agregar 2 al carrito</button>
+        <button onClick="">Agregar 3 al carrito</button>
+    </div>
+    <div>
+        <h1>Bocadillo</h1>
+        <button onClick="sumarUno">Agregar 1 al carrito</button>
+        <button onClick="">Agregar 2 al carrito</button>
+        <button onClick="">Agregar 3 al carrito</button>
+    </div>
+    <div>
+        <h1>Bebida</h1>
+        <button onClick="sumarUno">Agregar 1 al carrito</button>
+        <button onClick="">Agregar 2 al carrito</button>
+        <button onClick="">Agregar 3 al carrito</button>
+    </div>
+    <div style="border-top: 1px solid black; margin: 10px; padding: 10px;">
+        <button onClick="">Ver Total de Items</button>
+        <button onClick="borrarCarrito()">Vaciar Carrito</button>
+    </div>
+    <div id="informacion">9999</div>
+    
+    <script>
+        //Variable
+        let cantidad=15;
+        const txtInfo= document.getElementById("informacion")
+
+        const sumarUno = document.querySelector(".sumarUno");
+
+
+        //Funciones
+        function borrarCarrito(){
+            cantidad=0;
+        }
+        function verTotal(){
+            const mensaje=("Haz marcado ${cantidad} de items");
+
+        }
+        function agregar(sumarUno){
+            sumarUno++;
+            return 
+        }
+    </script>
+</body>
+</html>
