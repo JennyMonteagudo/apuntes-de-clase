@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora 2.0</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <div class="calculadora">
+        <div>
+
+            <input type="number" id="num1" placeholder="Numero1">
+        </div>
+        <div>
+            <input type="number" id="num2" placeholder="Numero2">
+
+        </div>
+
+        <div id="operaciones">
+            <button id="btnSuma">Suma</button>
+            <button id="btnResta">Resta</button>
+            <button id="btnMulti">Multiplicar *5</button>
+            <button id="btnDiv">Dividir /2</button>
+        </div>
+
+        <h3>Resultado</h3>
+        <div id="resultado">0</div>
+    </div>
+
+    <script>
+
+        //1. Definimos variables
+        const input1= document.querySelector("#num1");
+        let valor1=0;
+        const input2= document.querySelector("#num2");
+        let valor2=0;
+
+        const btnSuma = document.getElementById("btnSuma");
+        const btnResta = document.getElementById("btnResta");
+        const btnMulti = document.getElementById("btnMulti");
+        const btnDiv = document.getElementById("btnDiv");
+        const divResultado = document.getElementById("resultado");
+
+        //2. Funciones
+        function obtenerValores(){
+            valor1= parseFloat(input1.value);
+            valor2= parseFloat(input2.value);
+        }
+
+        obtenerValores()
+        //const divResultado2 = document.querySelector("lo que quieras")
+        ImprimirEnPantalla(" Has click en los botones");
+
+        btnSuma.addEventListener("click", () => {
+            alert("me");
+            obtenerValores();
+            numero= valor1 + valor2;
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
+        });
+
+        btnResta.addEventListener("click", () => {
+            numero = valor1 - valor2;
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
+        });
+
+        btnMulti.addEventListener("click", () => {
+            numero = numero * 5;
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
+        });
+
+        btnDiv.addEventListener("click", () => {
+            numero = numero / 2;
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
+        });
+
+        //creamos una funcion que imrprime en pantalla un resultado
+        function ImprimirEnPantalla(valor) {
+
+            divResultado.innerText = valor;
+        }
+    </script>
+
+</body>
+
+</html>
