@@ -22,8 +22,8 @@
         <div id="operaciones">
             <button id="btnSuma">Suma</button>
             <button id="btnResta">Resta</button>
-            <button id="btnMulti">Multiplicar *5</button>
-            <button id="btnDiv">Dividir /2</button>
+            <button id="btnMulti">Multiplicar</button>
+            <button id="btnDiv">Dividir</button>
         </div>
 
         <h3>Resultado</h3>
@@ -55,7 +55,7 @@
         ImprimirEnPantalla(" Has click en los botones");
 
         btnSuma.addEventListener("click", () => {
-            alert("me");
+            //alert("me");
             obtenerValores();
             numero= valor1 + valor2;
             //divResultado.innerText= numero;
@@ -63,19 +63,22 @@
         });
 
         btnResta.addEventListener("click", () => {
+            obtenerValores();
             numero = valor1 - valor2;
             //divResultado.innerText= numero;
             ImprimirEnPantalla(numero);
         });
 
         btnMulti.addEventListener("click", () => {
-            numero = numero * 5;
+            obtenerValores();
+            numero = valor1 * valor2;
             //divResultado.innerText= numero;
             ImprimirEnPantalla(numero);
         });
 
         btnDiv.addEventListener("click", () => {
-            numero = numero / 2;
+            obtenerValores();
+            numero = valor1 / valor2;
             //divResultado.innerText= numero;
             ImprimirEnPantalla(numero);
         });
