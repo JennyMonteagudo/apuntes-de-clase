@@ -29,6 +29,7 @@ function nextImagen(){
     if (imgIndex >= totalImages){
         imgIndex=0;
     }
+    actualizarSlider();
     actualizarContador();
 }
 function prevImagen(){
@@ -36,6 +37,7 @@ function prevImagen(){
     if (imgIndex < 0){
         imgIndex= totalImages;
     }
+    actualizarSlider();
     actualizarContador();
 }
 
@@ -44,7 +46,7 @@ function actualizarSlider(){
     sliderImages.style.transform = `translateX(${-width * imgIndex}px)`;
 }
 function actualizarContador(){
-    spanActual.textContent = imgIndex + 1;
+    spanActual.textContent = imgIndex +1;
     
 }
 
@@ -72,5 +74,5 @@ sliderImages.addEventListener("mouseout", () => {
 })
 
 function agregarIntervalo(){
-    intervalos = setInterval(nextImagen, 1000);
+    intervalos = setInterval(nextImagen, 2000);
 }

@@ -15,6 +15,7 @@ body{
     overflow: hidden;
     border: 2px solid lightskyblue;
     border-radius: 10px;
+    position: relative;
 }
 .Slider-images{
     display: flex;
@@ -29,4 +30,15 @@ body{
     min-height: 600px;
     max-height: 600px;
 
+}
+button{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+}
+.btnPrev{
+    left: 0;
+}
+.btnNext{
+    right: 0;
 }
