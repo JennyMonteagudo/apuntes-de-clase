@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+
+    <style>
+        .tarjeta{
+            border: solid black 1px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+
+Cargando contenido
+    </div>
+
+    <script>
+        const dataUsuarios = `[{
+    "nombre": "Juan Pérez",
+    "edad": 28,
+    "correo": "juan.perez@example.com"
+  },
+  {
+    "nombre": "Ana Gómez",
+    "edad": 34,
+    "correo": "ana.gomez@example.com"
+  },
+  {
+    "nombre": "Luis Torres",
+    "edad": 23,
+    "correo": "luis.torres@example.com"
+  }]`;
+
+        //Convertir ni JSON a un Objeto/lista de JS
+        const listaUsuarios = JSON.parse(dataUsuarios);
+
+        console.log("OBJ JS ES", listaUsuarios);
+        console.log("Nombre 1 es", listaUsuarios[0].nombre);
+
+        const divContenedor = document.querySelector("#contenedor")
+
+        listaUsuarios.forEach(usuario => {
+
+            console.log(usuario.nombre)
+            divContenedor.innerHTML += `<div class="tarjeta">
+                    <h3>${usuario.nombre}</h3>
+                    <p>${usuario.edad}</p>
+                    <p>${usuario.correo}</p>
+                </div>`;
+        });
+
+        
+    </script>
+</body>
+
+</html>

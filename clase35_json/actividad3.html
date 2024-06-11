@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+</head>
+<body>
+
+    <!--lista de peliculas-->
+    <div id="contenedor"></div>
+
+    <!--datos de las peliculas-->
+    <div id="pelis"></div>
+
+    <script>
+        const dataPeliculas = `[
+  {
+    "titulo": "Inception",
+    "genero": "Ciencia Ficción",
+    "puntaje": 8.8,
+    "descripcion": "Un ladrón que roba secretos corporativos a través del uso de tecnología de sueños es dado la tarea inversa de plantar una idea en la mente de un CEO.",
+    "imagen": "https://stylelovely.com/wp-content/uploads/2020/04/proyecto-rampagne-peliculas-mas-vistas-durante-la-cuarentena.jpg"
+  },
+  {
+    "titulo": "The Dark Knight",
+    "genero": "Acción",
+    "puntaje": 9.0,
+    "descripcion": "Cuando el Joker emerge como el nuevo villano del caos, Batman debe aceptar uno de los mayores desafíos psicológicos y físicos para combatir la injusticia.",
+    "imagen": "https://via.placeholder.com/150"
+  },
+  {
+    "titulo": "Interstellar",
+    "genero": "Aventura",
+    "puntaje": 8.6,
+    "descripcion": "Un equipo de exploradores viaja a través de un agujero de gusano en el espacio en un intento de asegurar la supervivencia de la humanidad.",
+    "imagen": "https://via.placeholder.com/150"
+  }
+]`
+
+        //1. convertimos el JSON en objeto de JS
+        const divContenedor = document.querySelector("#contenedor")
+        const listaPeliculas = JSON.parse (dataPeliculas);
+
+        console.log(listaPeliculas);
+
+        //2. recorremos cada pelicula, y creamos un div en contenedor
+
+        listaPeliculas.forEach(pelicula =>{
+            //ahora trabajo por pelicula
+            console.log(pelicula.titulo);
+
+            divContenedor.innerHTML += `
+            <div class="peli">
+                <h1>${pelicula.tilulo}</h1>
+                <img scr="${pelicula.imagen}" alt="${pelicula.titulo}">
+            </div>`
+        });
+
+        //Agregamos un eventListener ("click") en cada pelicula recien creada y su funcion debera cargar un div en #pelicula con sus datos. 
+
+        const pelis= document.querySelectorAll(".pelis");
+
+        pelis.forEach(peli => {
+            peli.addEventListener("click", (event)=>{
+                alert ("me hicieron click");
+
+                const divPelicula=event.target;
+                console.log(divPelicula);
+            })
+        })
+
+    </script>
+</body>
+</html>

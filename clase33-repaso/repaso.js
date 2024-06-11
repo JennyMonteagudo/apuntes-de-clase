@@ -35,7 +35,7 @@ function cambiarMinutos(fecha, minutos){
     return nuevaFecha;
 }
 
-const hoy= new Date();
+const hoy2= new Date();
 const dentroDe5minutos= cambiarMinutos(fecha, 5);
 const hace15minutos= cambiarMinutos(fecha, -15);
 
@@ -106,7 +106,7 @@ document.body.innerHTML +=``
 //objeto JS
 const alumno={
     edad: 25,
-    nombre: "Pepito";
+    nombre: "Pepito",
     saludar:() => {alert("Hola");}
 }
 
