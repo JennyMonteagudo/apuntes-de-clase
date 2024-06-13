@@ -4,15 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peliculas</title>
+
+    <style>
+      body{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+      }
+      .main{
+        display: flex;
+      }
+      .contenedor img{
+        max-width: 200px;
+      }
+      .contenedor{
+        flex-grow: 1;
+        background: lightcyan;
+        display: flex;
+        flex-wrap:wrap ;
+      }
+      .pelicula{
+        background: lightpink;
+        width: 200px;
+        min-height: 200px;
+      }
+      .pelicula img{
+        width: 150px;
+      }
+
+      .peliCard{
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+
+    </style>
 </head>
 <body>
 
+  <main class="main">
     <!--lista de peliculas-->
     <div id="contenedor"></div>
 
+    <div class="pelicula">
+      cargando
+    </div>
     <!--datos de las peliculas-->
-    <div id="pelis"></div>
-
+    <div id="peliCard"></div>
+</main>
     <script>
         const dataPeliculas = `[
   {
@@ -20,7 +60,8 @@
     "genero": "Ciencia Ficción",
     "puntaje": 8.8,
     "descripcion": "Un ladrón que roba secretos corporativos a través del uso de tecnología de sueños es dado la tarea inversa de plantar una idea en la mente de un CEO.",
-    "imagen": "https://stylelovely.com/wp-content/uploads/2020/04/proyecto-rampagne-peliculas-mas-vistas-durante-la-cuarentena.jpg"
+    "imagen": "img/1.jpg",
+    "imagen2": "https://stylelovely.com/wp-content/uploads/2020/04/proyecto-rampagne-peliculas-mas-vistas-durante-la-cuarentena.jpg"
   },
   {
     "titulo": "The Dark Knight",
@@ -41,34 +82,70 @@
         //1. convertimos el JSON en objeto de JS
         const divContenedor = document.querySelector("#contenedor")
         const listaPeliculas = JSON.parse (dataPeliculas);
+        const divPelicula = document.querySelector(".pelicula")
 
         console.log(listaPeliculas);
 
         //2. recorremos cada pelicula, y creamos un div en contenedor
 
-        listaPeliculas.forEach(pelicula =>{
+        listaPeliculas.forEach( (pelicula, indice) =>{
             //ahora trabajo por pelicula
             console.log(pelicula.titulo);
+            console.log(indice);
 
-            divContenedor.innerHTML += `
-            <div class="peli">
-                <h1>${pelicula.tilulo}</h1>
-                <img scr="${pelicula.imagen}" alt="${pelicula.titulo}">
-            </div>`
+            //version1 
+            //divContenedor.innerHTML += `
+            //<div class="peliCard" onClick="seleccionarPelicula(${indice})">
+               // <h2>${pelicula.titulo}</h2>
+               // <img scr="${pelicula.imagen}" alt="${pelicula.titulo}">
+           // </div>`
+
+            //Version2: Crear div con createElement()
+            const peliculaDiv= document.createElement(`div`);
+            peliculaDiv.classList.add("peliCard");
+
+            peliculaDiv.innerHTML=`
+            <h2>${pelicula.titulo} </h2>
+            <img scr="${pelicula.imagen}" alt="${pelicula.titulo}">
+              `;
+
+            divContenedor.appendChild(peliculaDiv);
+
+            peliculaDiv.addEventListener("click", ()=>{
+              seleccionarPelicula(indice);
+            })
+
+
         });
+
+        function seleccionarPelicula(num) {
+          
+          console.log(listaPeliculas[num]);
+          const pelicula= listaPeliculas[num];
+
+          divPelicula.innerHTML=`
+          <h3>${pelicula.titulo}</h3>
+          <ul>
+            <li>${pelicula.genero}</li>
+            <li>${pelicula.puntaje}</li>
+            </ul>
+            <p>${pelicula.descripcion}</p>
+          `
+
+        };
 
         //Agregamos un eventListener ("click") en cada pelicula recien creada y su funcion debera cargar un div en #pelicula con sus datos. 
 
-        const pelis= document.querySelectorAll(".pelis");
+        //const pelis= document.querySelectorAll(".peliCard");
 
-        pelis.forEach(peli => {
-            peli.addEventListener("click", (event)=>{
-                alert ("me hicieron click");
+        //pelis.forEach(peli => {
+           // peli.addEventListener("click", (event)=>{
+             //   alert ("me hicieron click");
 
-                const divPelicula=event.target;
-                console.log(divPelicula);
-            })
-        })
+             //   const divPelicula=event.target;
+            //    console.log(divPelicula);
+        //    })
+       // })
 
     </script>
 </body>

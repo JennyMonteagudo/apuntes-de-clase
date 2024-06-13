@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .pelisContainer{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Filtrar peliculas</h1>
+
+    <div class="titulo">
+        <p>Filtrar por titulo</p>
+    <form action="">
+        <label for="inputTitulo">Filtrar por titulo</label>
+        <input id="inputTitulo" type="text" placeholder="Ingrese el tilulo de la peli">
+    </form>
+</div>
+
+    <div class="botones">
+        <button class="btn" id="todos">Todos</button>
+        <button class="btn" id="cienciaFiccion">Ciencia Ficcion</button>
+        <button class="btn" id="accion">Accion</button>
+        <button class="btn"  id="aventura">Aventura</button>
+    </div>
+
+    <div class="pelisContainer">
+        cargando
+    </div>
+
+    <script>
+        //Definir variables
+
+        const pelisContainer = document.querySelector(".pelisContainer");
+        const inputTitulo = document.querySelector("#inputTitulo");
+
+        const btnTodos = document.querySelector("#todos");
+        const btnCienciaF = document.querySelector("#cienciaFiccion");
+        const btnAccion = document.querySelector("#accion");
+        const btnAventura = document.querySelector("#aventura");
+
+        const dataPeliculas = `[
+        {
+            "titulo": "Inception",
+            "genero": "Ciencia Ficción",
+            "puntaje": 8.8,
+            "descripcion": "Un ladrón que roba secretos corporativos a través del uso de tecnología de sueños es dado la tarea inversa de plantar una idea en la mente de un CEO.",
+            "imagen": "img/1.jpg",
+            "imagen2": "https://stylelovely.com/wp-content/uploads/2020/04/proyecto-rampagne-peliculas-mas-vistas-durante-la-cuarentena.jpg"
+        },
+        {
+            "titulo": "The Dark Knight",
+            "genero": "Acción",
+            "puntaje": 9.0,
+            "descripcion": "Cuando el Joker emerge como el nuevo villano del caos, Batman debe aceptar uno de los mayores desafíos psicológicos y físicos para combatir la injusticia.",
+            "imagen": "https://via.placeholder.com/150"
+        },
+        {
+            "titulo": "Interstellar",
+            "genero": "Aventura",
+            "puntaje": 8.6,
+            "descripcion": "Un equipo de exploradores viaja a través de un agujero de gusano en el espacio en un intento de asegurar la supervivencia de la humanidad.",
+            "imagen": "https://via.placeholder.com/150"
+        }
+        ]`
+
+        const listaPeliculas = JSON.parse (dataPeliculas);
+
+        //Agregar Event Listener
+        inputTitulo.addEventListener("input", ()=>{
+            const texto = inputTitulo.value.toLowerCase();
+
+            const pelisFiltradas = listaPeliculas.filter (peli => peli.titulo.toLowerCase().includes(texto));
+
+            console.log(pelisFiltradas);
+        })
+        //Nuestras funciones
+
+        function listarPeliculas(lista){
+            //mostrar enpantalla las pelis contemplate string
+            pelisContainer.innerHTML="";
+
+            lista.forEach(pelicula =>{
+                
+                pelisContainer.innerHTML+=`
+                <img scr="${pelicula.imagen}" alt="${pelicula.titulo}">
+                <div>
+                    <h2>${pelicula.titulo}</h2>
+                    <p><strong>Genero:</strong>${pelicula.genero}</strong></p>
+                    <p><strong>Puntaje:</strong>${pelicula.puntaje}</strong></p>
+                    <p><strong>Descripcion:</strong>${pelicula.descripcion}</strong></p>
+                </div>
+                `;
+            })
+        }
+
+        function filtrarPorGenero(){
+
+        }
+
+        //ejecutar el codigo
+
+        listarPeliculas(listaPeliculas);
+    </script>
+</body>
+</html>
