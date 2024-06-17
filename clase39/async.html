@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>lista de usuarios</h1>
+
+    <ul id="listaUsuarios">
+
+    </ul>
+
+
+    <script>
+    const ulUsuarios= document.querySelector("#listaUsuarios");
+
+    async function traerUsuarios(){
+        try{
+
+        const usuariosJson = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        const listaUsuarios = await usuariosJson.json(); //convierte misdatosa JSON
+        
+        console.log(listaUsuarios.name);
+
+        imprimirUsuarios(listaUsuarios);
+
+        //ulUsuarios.innerHTML+=`<il>${listaUsuarios[0].name}</il>`;
+
+
+        }catch (error) {
+            console.error("tuve un error:", error);
+        }
+    
+}
+
+function imprimirUsuarios(lista){
+    lista.forEach(usuario => {
+        const li= document.createElement("li");
+        li.textContent = usuario.name;
+        
+        ulUsuarios.appendChild(li);
+    });
+
+   // let htmlUsuarios="";
+   // lista.forEach(usuario => {
+   //    
+  //      htmlUsuarios+=`<il>$//{listaUsuarios.name}</il>`
+   // });
+   // ulUsuarios.innerHTML=htmlUsuarios;
+};
+traerUsuarios();
+
+    </script>
+</body>
+</html>
