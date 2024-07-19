@@ -1,0 +1,68 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.portfolio__title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.portfolio__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project--link {
+    text-decoration: none;
+    color: inherit;
+    max-width: 200px;
+    text-align: center;
+}
+
+.project__image {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.project__title {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.project__container {
+    padding: 20px;
+}
+
+.project__subtitle {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.project__description {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.project__images-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project__tools-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.project__tool {
+    max-width: 50px;
+    height: auto;
+}
